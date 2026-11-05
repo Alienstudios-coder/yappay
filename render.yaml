@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: yappay-mpesa-backend
+    name: yappay-app
     runtime: node
     plan: free
     rootDir: backend
