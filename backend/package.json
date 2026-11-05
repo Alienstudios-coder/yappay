@@ -1,0 +1,19 @@
+{
+  "name": "yappay-mpesa-backend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --env-file=.env server.js",
+    "db:import-local-users": "node --env-file=.env database/import-local-users.js"
+  },
+  "engines": {
+    "node": ">=20.6"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "google-auth-library": "^11.3.1",
+    "pg": "^8.23.1"
+  }
+}

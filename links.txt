@@ -1,0 +1,2 @@
+aliengraphics2026.netlify.app
+https://app.netlify.com/projects/aliengraphics2026/configuration/project

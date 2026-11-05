@@ -1,0 +1,12 @@
+{
+  "name": "yappay-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YapPay static website",
+  "scripts": {
+    "serve": "npx --yes http-server . -p 8080 -c-1",
+    "backend:install": "npm --prefix backend install",
+    "backend:start": "npm --prefix backend start"
+  },
+  "engines": { "node": ">=20.6" }
+}

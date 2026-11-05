@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: yappay-mpesa-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - { key: NODE_ENV, value: production }
+      - key: DATABASE_URL
+        fromDatabase:
+          name: yappay-postgres
+          property: connectionString
+      - { key: MPESA_ENV, value: sandbox }
+      - { key: MPESA_CONSUMER_KEY, sync: false }
+      - { key: MPESA_CONSUMER_SECRET, sync: false }
+      - { key: MPESA_SHORTCODE, value: "174379" }
+      - { key: MPESA_PASSKEY, sync: false }
+      - { key: MPESA_TRANSACTION_TYPE, value: CustomerPayBillOnline }
+      - { key: CALLBACK_URL, sync: false }
+      - { key: ALLOWED_ORIGIN, value: https://localhost }
+      - { key: GOOGLE_CLIENT_ID, sync: false }
+      - { key: GOOGLE_CLIENT_SECRET, sync: false }
+      - { key: GOOGLE_REDIRECT_URI, sync: false }
+
+databases:
+  - name: yappay-postgres
+    databaseName: yappay
+    user: yappay
+    plan: free
