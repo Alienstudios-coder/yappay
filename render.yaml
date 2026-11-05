@@ -2,6 +2,7 @@ services:
   - type: web
     name: yappay-mpesa-backend
     runtime: node
+    plan: free
     rootDir: backend
     buildCommand: npm install
     startCommand: npm start
